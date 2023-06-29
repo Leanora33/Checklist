@@ -1,0 +1,23 @@
+using System;
+
+namespace FactorialCalculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter a number: ");
+            int number = int.Parse(Console.ReadLine());
+            long fact = Factorial(number);
+            Console.WriteLine("Factorial is " + fact);
+        }
+
+        static long Factorial(int number)
+        {
+            if (number == 0) 
+                return 1;
+            else 
+                return number * Factorial(number - 1);
+        }
+    }
+}
